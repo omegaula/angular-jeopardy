@@ -1,14 +1,14 @@
 // import required packages
 import 'zone.js';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { JeopardyAppComponent } from './jeopardy-app/jeopardy-app.component';
 
 // describe component
 @Component({
-  selector: 'add-one-button', // component name used in markup
-  standalone: true, // component is self-contained
-  // the component's markup
+  selector: 'add-one-button',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
    <app-jeopardy-app></app-jeopardy-app>
   `,

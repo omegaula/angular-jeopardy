@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  signal,
+} from '@angular/core';
+import { JeopardyTileComponent } from '../jeopardy-tile/jeopardy-tile.component';
 
 @Component({
   selector: 'app-jeopardy-app',
@@ -6,9 +12,10 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./jeopardy-app.component.css'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [JeopardyTileComponent],
 })
 export class JeopardyAppComponent implements OnInit {
-  constructor() {}
+  tile1 = signal('$100');
 
   ngOnInit() {}
 }
